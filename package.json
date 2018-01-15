@@ -9,6 +9,7 @@
     "bcrypt": "^1.0.3",
     "classnames": "^2.2.5",
     "meteor-node-stubs": "^0.3.2",
+    "node-sass": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
