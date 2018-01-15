@@ -36,7 +36,7 @@ class DonutsList extends React.Component {
                             <div key={donut._id}>
                                 <p>Name: {donut.name}</p>
                                 <p>Price: {donut.price}</p>
-                                <p>Is Comestible? : {donut.isComestible ? 'Yes' : 'No'}</p>
+                                <p>Is Comestible? : {donut.isComestible ? 'Comestible' : 'Not Comestible'}</p>
                                 {this.isDonutOwner(donut) &&
                                 <a href="" onClick={() => this.editDonut(donut._id)}>Edit</a>}
                                 {this.isDonutOwner(donut) &&
@@ -59,4 +59,3 @@ export default withTracker(() => {
         donuts: Donuts.find().fetch()
     }
 })(DonutsList);
-

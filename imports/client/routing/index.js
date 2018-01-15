@@ -29,6 +29,3 @@ route('/donuts/create', DonutsCreate, {}, {
 route('/donuts/edit/:_id', DonutsEdit, {}, {
     name: 'donuts.edit'
 });
-
-
-
