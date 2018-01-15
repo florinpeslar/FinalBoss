@@ -30,32 +30,39 @@ class DonutsList extends React.Component {
 
         return (
             <div>
+                <h1 className="text-center"> List of all Donuts!</h1>
+                <div className="text-center">
+                    <a className="btn btn-success" href="" onClick={() => FlowRouter.go('donuts.create')}>Create a donut</a>
+                </div>
                 {
                     donuts.map(donut => {
                         return (
                             <div key={donut._id}>
-                                <p>Name: {donut.name}</p>
-                                <p>Price: {donut.price}</p>
-                                <p>Is Comestible? : {donut.isComestible ? 'Comestible' : 'Not Comestible'}</p>
-                                {this.isDonutOwner(donut) &&
-                                <a href="" onClick={() => this.editDonut(donut._id)}>Edit</a>}
-                                {this.isDonutOwner(donut) &&
-                                <a href="" onClick={() => this.removeDonut(donut._id)}>Remove</a>}
-                            </div>
-                        )
+                                <div className="container">
+                                    <div className="m-10">
+                                        <p className="list-group-item">Name: {donut.name}</p>
+                                        <p className="list-group-item">Price: {donut.price}</p>
+                                        <p className="list-group-item list-group-item-danger">Is Comestible? : {donut.isComestible ? 'Comestible' : 'Not Comestible'}</p>
+                                        {this.isDonutOwner(donut) &&
+                                            <a className="btn btn-warning m-5" href="" onClick={() => this.editDonut(donut._id)}>Edit</a>}
+                                            {this.isDonutOwner(donut) &&
+                                                <a className="btn btn-danger pull-right m-5" href="" onClick={() => this.removeDonut(donut._id)}>Remove</a>}
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
                     })
                 }
-                <a href="" onClick={() => FlowRouter.go('donuts.create')}>Create a donut</a>
-            </div>
-        )
-    }
-}
+                </div>
+                )
+            }
+        }
 
-export default withTracker(() => {
-    const handle = Meteor.subscribe('donuts');
+        export default withTracker(() => {
+            const handle = Meteor.subscribe('donuts');
 
-    return {
-        loading: !handle.ready(),
-        donuts: Donuts.find().fetch()
-    }
-})(DonutsList);
+            return {
+                loading: !handle.ready(),
+                donuts: Donuts.find().fetch()
+            }
+        })(DonutsList);

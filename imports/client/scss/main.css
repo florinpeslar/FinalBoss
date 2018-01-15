@@ -6,12 +6,25 @@
 .bold {
   font-weight: bold; }
 
+.m-5 {
+  margin: 5px; }
+
+.m-10 {
+  margin: 10px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
 /*****END OF GENERAL CLASSES******/
 img {
   width: 50px;
   height: 50px;
   top: 3px;
   position: absolute; }
+
+input {
+  outline: 0;
+  border: 1px solid transparent; }
 
 .navbar-default .navbar-nav > li > a {
   color: #d35d8a; }
@@ -35,5 +48,8 @@ img {
   background-repeat: no-repeat;
   color: white;
   text-shadow: black 0.2em; }
+
+.border {
+  border: 1px solid black; }
 
 /*# sourceMappingURL=main.css.map */

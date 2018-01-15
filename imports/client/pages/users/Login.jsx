@@ -21,21 +21,36 @@ class Login extends React.Component {
 
     render() {
         return (
-            <main className="cc-main">
-                <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
-                    <AutoField name="email"/>
-                    <ErrorField name="email"/>
 
-                    <AutoField name="password" type="password"/>
-                    <ErrorField name="password"/>
+        <div>
 
-                    <button type="submit">
-                        Login
-                    </button>
-                </AutoForm>
-            </main>
-        )
-    }
+
+            <div className="container text-center">
+                
+                <a className="navbar-brand" href="/">
+                    <img src={"img/logo.png"}/>
+                </a>
+
+                <h1>Login</h1>
+                <main className="cc-main">
+
+                    <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
+                        <AutoField name="email"/>
+                        <ErrorField name="email"/>
+
+                        <AutoField name="password" type="password"/>
+                        <ErrorField name="password"/>
+
+                        <button type="submit" className="btn btn-success">
+                            Login
+                        </button>
+                    </AutoForm>
+                </main>
+
+            </div>
+        </div>
+    )
+}
 }
 
 const LoginSchema = new SimpleSchema({
