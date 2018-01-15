@@ -1,7 +1,49 @@
-.navbar-default .navbar-nav>li>a {
-  color: red;
+// IMPORT THE FONT
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-  &:hover {
-    background-color: green;
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/***********GENERAL CLASSES*********/
+
+.bold {font-weight: bold}
+
+/*****END OF GENERAL CLASSES******/
+
+img {
+  width: 50px;
+  height: 50px;
+  top: 3px;
+  position: absolute;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #d35d8a;
+    &:hover {
+    color: #9d2952;
   }
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  text-shadow: 1px 0px 11px  #a42956;
+}
+
+.navbar-default {
+  background-color: white;
+  padding: 5px;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  background-position: 0% 25%;
+  background-image: url(/img/b_j.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: black 0.2em;
 }

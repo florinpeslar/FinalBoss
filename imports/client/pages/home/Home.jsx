@@ -14,7 +14,7 @@ class Home extends Component {
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="/">Donuts!</a>
+                            <a className="navbar-brand" href="/"><img src={"img/logo.png"}/></a>
                         </div>
 
                         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -30,7 +30,7 @@ class Home extends Component {
 
                 <div className="jumbotron">
                     <div className="container">
-                        <h1 className="text-center">Hello Donut!</h1>
+                        <h1 className="text-center bold">Hello Donut!</h1>
                     </div>
                 </div>
             </div>
