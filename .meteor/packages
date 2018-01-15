@@ -25,3 +25,4 @@ fourseven:scss
 aldeed:collection2-core@2.0.0
 matb33:collection-hooks
 react-meteor-data
+twbs:bootstrap
